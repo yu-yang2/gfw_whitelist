@@ -1,4 +1,4 @@
-var wall_proxy = "SOCKS5 127.0.0.1:1080; SOCKS 127.0.0.1:1080;";
+var wall_proxy = "SOCKS5 192.168.0.4:1080; SOCKS 192.168.0.4:1080;";
 var nowall_proxy = "DIRECT;";
 var direct = "DIRECT;";
 var ip_proxy = "DIRECT;";
@@ -1559,6 +1559,8 @@ var white_domains = {"am":{
 "abchina":1,
 "ablesky":1,
 "accgame":1,
+"acfun":1,
+"acgvideo":1,
 "aci-wh":1,
 "acs86":1,
 "acshoes":1,
@@ -1718,6 +1720,7 @@ var white_domains = {"am":{
 "apabi":1,
 "apandim":1,
 "apclc":1,
+"api.tiduyun":1,
 "apkyx":1,
 "app111":1,
 "app17":1,
@@ -3014,6 +3017,7 @@ var white_domains = {"am":{
 "dospy":1,
 "dostor":1,
 "douban":1,
+"doubanio":1,
 "douguo":1,
 "douluodalu123":1,
 "douxie":1,
@@ -5772,7 +5776,6 @@ var white_domains = {"am":{
 "ptbus":1,
 "ptdao":1,
 "ptjy":1,
-"ptlogin2.qq":1,
 "ptotour":1,
 "ptpcp":1,
 "puahome":1,
@@ -5914,6 +5917,7 @@ var white_domains = {"am":{
 "qiushibaike":1,
 "qiushibang":1,
 "qiuxian":1,
+"qiye.aliyun":1,
 "qiyefabu":1,
 "qiyegu":1,
 "qiyeku":1,
@@ -6385,6 +6389,7 @@ var white_domains = {"am":{
 "smswike":1,
 "smvtc":1,
 "smwrc":1,
+"smzdm":1,
 "smzy":1,
 "snail":1,
 "snda":1,
@@ -8296,6 +8301,7 @@ var white_domains = {"am":{
 "cli":1,
 "iapps":1,
 "iyy":1,
+"tower":1,
 "yixin":1
 },"info":{
 "gmold":1,
@@ -8303,6 +8309,8 @@ var white_domains = {"am":{
 "lztech":1,
 "meihua":1,
 "williamlong":1
+},"io":{
+"dashboard.daocloud":1
 },"jobs":{
 "cn":1
 },"jp":{
@@ -9351,6 +9359,7 @@ var white_domains = {"am":{
 "cxwy":1,
 "cxwz":1,
 "cyedu":1,
+"domeos":1,
 "donglin":1,
 "dtjy":1,
 "duchang":1,
@@ -9571,6 +9580,7 @@ var white_domains = {"am":{
 "9555":1,
 "9928":1,
 "9998":1,
+"acfun":1,
 "acg":1,
 "bilibili":1,
 "caoxian":1,
@@ -9683,8 +9693,6 @@ function isInDomains(domain_dict, host) {
 	}
 }
 function FindProxyForURL(url, host) {
-	url=""+url;
-	host=""+host;
 	if ( isPlainHostName(host) === true ) {
 		return direct;
 	}
